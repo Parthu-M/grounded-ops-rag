@@ -38,7 +38,12 @@ class Settings:
     @classmethod
     def from_env(cls) -> "Settings":
         package_root = Path(__file__).resolve().parents[2]
-        root = Path(os.getenv("AI_TAKEHOME_HOME", package_root)).resolve()
+        root = Path(
+            os.getenv(
+                "GROUNDED_OPS_HOME",
+                os.getenv("AI_TAKEHOME_HOME", package_root),
+            )
+        ).resolve()
 
         def rooted(name: str, default: str) -> Path:
             candidate = Path(os.getenv(name, default))

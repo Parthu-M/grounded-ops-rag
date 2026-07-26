@@ -3,9 +3,9 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "applied-ai-takehome"
+name = "grounded-ops-rag"
 version = "1.0.0"
-description = "Cost-efficient RAG service and bias-aware LLM-as-judge pipeline"
+description = "Production-style RAG operations console and bias-aware LLM evaluation pipeline"
 requires-python = ">=3.11"
 dependencies = [
   "chromadb>=1.0,<2",

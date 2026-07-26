@@ -157,7 +157,7 @@ export function Settings({ onReconnect, onNotify }: SettingsProps) {
             <span className="section-kicker">Production note</span>
             <h2>Protect mutation routes.</h2>
             <p>
-              The take-home API leaves ingestion unauthenticated for easy
+              The demo API leaves ingestion unauthenticated for easy
               demonstration. Put <code>/ingest</code> behind an admin gateway or
               private network before indexing real customer documents.
             </p>

@@ -11,7 +11,7 @@ class HashingEmbedder:
     """Stateless, deterministic local embedding for reproducible evaluation.
 
     This is a lexical n-gram embedding, not a semantic foundation-model
-    embedding. It is intentionally honest and key-free for the take-home demo.
+    embedding. It is intentionally honest and key-free for the product demo.
     """
 
     def __init__(self, dimensions: int = 768) -> None:

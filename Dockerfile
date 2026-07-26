@@ -16,7 +16,7 @@ COPY results ./results
 COPY --from=frontend /src/ai_takehome/rag/static ./src/ai_takehome/rag/static
 RUN pip install --no-cache-dir .
 
-ENV AI_TAKEHOME_HOME=/app \
+ENV GROUNDED_OPS_HOME=/app \
     PYTHONPATH=/app/src \
     PORT=8000
 EXPOSE 8000

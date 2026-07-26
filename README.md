@@ -1,11 +1,12 @@
-# Applied AI / ML Engineering Take-Home
+# Grounded Ops RAG
 
-[![CI](https://github.com/Parthu-M/applied-ai-takehome/actions/workflows/ci.yml/badge.svg)](https://github.com/Parthu-M/applied-ai-takehome/actions/workflows/ci.yml)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Parthu-M/applied-ai-takehome)
+[![CI](https://github.com/Parthu-M/grounded-ops-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/Parthu-M/grounded-ops-rag/actions/workflows/ci.yml)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Parthu-M/grounded-ops-rag)
 
 [Open the live Grounded Ops application](https://grounded-ops-rag-parthu.onrender.com)
 
-This repository answers both assignment problems:
+Grounded Ops RAG is a production-style retrieval and evaluation platform that
+implements both engineering problems from the original assignment:
 
 1. a Chroma-backed, cost-conscious RAG HTTP service with reproducible retrieval, answer, latency, and cost evaluation; and
 2. an auditable pairwise LLM-as-judge pipeline with dual-order judging, a structured rubric, bias probes, human-label validation, and A/B winner declaration.
@@ -110,7 +111,7 @@ To publish on a container host (Render, Railway, Fly.io, Azure Web App, or a com
 2. Create a Docker-based web service from the repository root; the included `Dockerfile` builds both layers.
 3. Expose container port `8000` and configure the health check as `/health`.
 4. Attach a persistent volume at `/app/.runtime` so the Chroma index and query logs survive releases.
-5. Set variables from `.env.example`. At minimum, set `AI_TAKEHOME_HOME=/app` and `CHROMA_PATH=/app/.runtime/chroma`; add `OPENAI_API_KEY` only when using an OpenAI-backed generator or judge.
+5. Set variables from `.env.example`. At minimum, set `GROUNDED_OPS_HOME=/app` and `CHROMA_PATH=/app/.runtime/chroma`; add `OPENAI_API_KEY` only when using an OpenAI-backed generator or judge.
 6. Run `rag ingest data/corpus` once in the deployed container, then verify `/health`, `/documents`, and one query in the playground.
 
 For a separately hosted static frontend, run `npm run build` in `frontend/`, publish `frontend/dist/`, set `VITE_DEFAULT_API_MODE=live` and `VITE_API_BASE_URL` before building, and allow the frontend origin through the backend's `CORS_ALLOWED_ORIGINS`.
@@ -135,7 +136,7 @@ The Knowledge screen and `POST /upload` accept one or more files directly from t
 
 Copying a file into `data/corpus` does not mutate the vector index by itself. Use **Knowledge → Sync data/corpus**, `POST /ingest`, or `rag ingest data/corpus` after adding or changing files there. Browser uploads are indexed immediately and the inventory refreshes after the request succeeds.
 
-Uploads use multipart form data, validate extensions, reject empty or malformed PDF payloads, sanitize filenames, and enforce the configurable `MAX_UPLOAD_FILES` and `MAX_UPLOAD_MB` limits. Files are persisted under `UPLOAD_DIR` so uploading the same filename updates the same canonical source. Image-only PDFs return an explicit OCR requirement instead of silently indexing empty content. Advanced path ingestion resolves relative paths from `AI_TAKEHOME_HOME` and rejects paths outside that project root.
+Uploads use multipart form data, validate extensions, reject empty or malformed PDF payloads, sanitize filenames, and enforce the configurable `MAX_UPLOAD_FILES` and `MAX_UPLOAD_MB` limits. Files are persisted under `UPLOAD_DIR` so uploading the same filename updates the same canonical source. Image-only PDFs return an explicit OCR requirement instead of silently indexing empty content. Advanced path ingestion resolves relative paths from `GROUNDED_OPS_HOME` and rejects paths outside that project root.
 
 The Knowledge inventory provides a confirmed delete action. Deleting a browser-managed upload removes both its stored file and all of its Chroma chunks. Removing a server-path document clears its vectors but preserves the original source file, so a later corpus sync can restore it.
 

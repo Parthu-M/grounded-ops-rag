@@ -9,7 +9,7 @@ services:
     healthCheckPath: /health
     autoDeployTrigger: commit
     envVars:
-      - key: AI_TAKEHOME_HOME
+      - key: GROUNDED_OPS_HOME
         value: /app
       - key: CHROMA_PATH
         value: /app/.runtime/chroma
