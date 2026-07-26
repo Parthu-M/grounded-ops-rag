@@ -18,6 +18,7 @@ jobs:
         with:
           python-version: "3.11"
           cache: pip
+      - run: python -m pip install --upgrade pip "setuptools>=83"
       - run: pip install -e ".[dev]"
       # PYSEC-2026-311 affects Chroma's separate HTTP server. This project only
       # uses the in-process PersistentClient and never starts that server.
