@@ -1,0 +1,14 @@
+.git
+.github
+.openai
+.env
+.pytest_cache
+.runtime
+.venv
+build
+frontend/dist
+frontend/node_modules
+src/ai_takehome/rag/static
+**/__pycache__
+**/*.pyc
+data/corpus/*.pdf

@@ -1,0 +1,4 @@
+vectors,estimated_record_data_gb,queries_per_month,chroma_instance_assumption,chroma_compute_usd_month,chroma_ebs_gb,chroma_ebs_usd_month,chroma_total_usd_month,pinecone_serverless_usage_before_minimum_usd,pinecone_serverless_standard_usd_month,pinecone_legacy_p1_pods,pinecone_legacy_p1_usd_month
+100000,0.41,100000,t4g.small-equivalent,12.26,10,0.8,13.06,0.79,50.0,1,85.72
+1000000,4.096,100000,t4g.large-equivalent,49.06,30,2.4,51.46,7.91,50.0,1,85.72
+10000000,40.96,100000,r7g.2xlarge-equivalent,312.73,100,8.0,320.73,79.05,79.05,10,857.2

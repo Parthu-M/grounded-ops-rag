@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Nimbus Integrations</title>
+    <style>body { font-family: sans-serif; }</style>
+  </head>
+  <body>
+    <h1>Nimbus Integrations.</h1>
+    <p>Nimbus webhooks use HTTPS and send JSON request bodies. A webhook delivery is considered successful for any response status from 200 through 299. Failed webhook deliveries are retried after one minute, five minutes, 30 minutes, and two hours. Nimbus stops retrying after the fourth retry.</p>
+    <p>Every webhook request includes an X-Nimbus-Signature header computed with HMAC-SHA256. Receivers should calculate the signature over the unmodified request body and compare it using a constant-time function. Signing secrets can be rotated with a 24-hour overlap period.</p>
+    <p>The public API allows 600 requests per minute per organization. A rate-limited request returns status 429 and a Retry-After header measured in seconds. Pagination uses opaque cursor tokens, and clients must not parse or modify a cursor.</p>
+    <script>window.secretDocumentationNoise = "ignore me";</script>
+  </body>
+</html>
+

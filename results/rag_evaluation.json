@@ -1,0 +1,684 @@
+{
+  "run": {
+    "timestamp": "2026-07-26T07:55:44.851129+00:00",
+    "store": "chroma",
+    "vector_count": 12,
+    "embedding_model": "local/hash-hybrid-ngram-v1",
+    "embedding_dimensionality": 768,
+    "generator": "local/extractive-v1",
+    "chunk_size_words": 120,
+    "chunk_overlap_words": 25,
+    "k": 3,
+    "min_relevance_score": 0.12,
+    "question_count": 20,
+    "answerable_question_count": 18,
+    "latency_sample_count": 1000
+  },
+  "retrieval": {
+    "recall@3": 1.0,
+    "hit_rate": 1.0,
+    "mrr": 0.9722222222222222,
+    "ndcg@3": 0.9794960974206366,
+    "context_precision": 0.5185185185185184
+  },
+  "answer": {
+    "faithfulness": 1.0,
+    "answer_relevance": 0.9954545454545454,
+    "exact_match": 0.95,
+    "token_f1": 0.9954545454545454
+  },
+  "no_answer_accuracy": 1.0,
+  "latency_ms": {
+    "retrieval_p50": 2.0850500150118023,
+    "retrieval_p95": 2.469489999930374,
+    "retrieval_min": 1.4313999854493886,
+    "retrieval_max": 4.640600003767759
+  },
+  "cases": [
+    {
+      "id": "rag-01",
+      "question": "How long do Nimbus access tokens last?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_e1615e8ef301e68f"
+      ],
+      "retrieved_chunk_ids": [
+        "c_e1615e8ef301e68f",
+        "c_3537509368fed839",
+        "c_3d941e7356cc3eb3"
+      ],
+      "answer": "Nimbus access tokens expire after 15 minutes. [c_e1615e8ef301e68f]",
+      "gold_answer": "Nimbus access tokens expire after 15 minutes.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 3.034,
+        "generation": 3.436,
+        "total": 6.471
+      }
+    },
+    {
+      "id": "rag-02",
+      "question": "How many active API keys may one service account have?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_699867df50b0c464",
+        "c_e1615e8ef301e68f"
+      ],
+      "retrieved_chunk_ids": [
+        "c_699867df50b0c464",
+        "c_e1615e8ef301e68f",
+        "c_dcca4484c6d197cf"
+      ],
+      "answer": "Each service account can hold at most five active API keys. [c_699867df50b0c464]",
+      "gold_answer": "Each service account can hold at most five active API keys.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.6666666666666666
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.608,
+        "generation": 3.166,
+        "total": 5.775
+      }
+    },
+    {
+      "id": "rag-03",
+      "question": "How often does SCIM synchronize users and groups?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_e1615e8ef301e68f"
+      ],
+      "retrieved_chunk_ids": [
+        "c_e1615e8ef301e68f",
+        "c_9fcb117d8b441d45"
+      ],
+      "answer": "SCIM provisioning synchronizes users and groups from the identity provider every 40 minutes. [c_e1615e8ef301e68f]",
+      "gold_answer": "SCIM provisioning synchronizes users and groups from the identity provider every 40 minutes.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.5
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.638,
+        "generation": 2.795,
+        "total": 5.435
+      }
+    },
+    {
+      "id": "rag-04",
+      "question": "When does a subscription upgrade take effect?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_3b7911083ed3cda0"
+      ],
+      "retrieved_chunk_ids": [
+        "c_3b7911083ed3cda0"
+      ],
+      "answer": "Subscription upgrades take effect immediately and the remaining billing period is prorated. [c_3b7911083ed3cda0]",
+      "gold_answer": "Subscription upgrades take effect immediately and the remaining billing period is prorated.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 1.0
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.605,
+        "generation": 2.063,
+        "total": 4.669
+      }
+    },
+    {
+      "id": "rag-05",
+      "question": "What is the storage overage price?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_3b7911083ed3cda0",
+        "c_61a7b9cfdd2b2dc6"
+      ],
+      "retrieved_chunk_ids": [
+        "c_3b7911083ed3cda0",
+        "c_61a7b9cfdd2b2dc6"
+      ],
+      "answer": "Usage above the included storage allowance is billed at 12 cents per gigabyte-month. [c_3b7911083ed3cda0]",
+      "gold_answer": "Usage above the included storage allowance is billed at 12 cents per gigabyte-month.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 1.0
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.318,
+        "generation": 2.257,
+        "total": 4.576
+      }
+    },
+    {
+      "id": "rag-06",
+      "question": "Within how many days must an invoice be disputed?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_61a7b9cfdd2b2dc6"
+      ],
+      "retrieved_chunk_ids": [
+        "c_61a7b9cfdd2b2dc6",
+        "c_33b2facd37d78a5d",
+        "c_9fcb117d8b441d45"
+      ],
+      "answer": "Customers must contact support within 30 days to dispute an invoice. [c_61a7b9cfdd2b2dc6]",
+      "gold_answer": "Customers must contact support within 30 days to dispute an invoice.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.534,
+        "generation": 3.045,
+        "total": 5.58
+      }
+    },
+    {
+      "id": "rag-07",
+      "question": "What availability does Nimbus target for Enterprise?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_9fcb117d8b441d45"
+      ],
+      "retrieved_chunk_ids": [
+        "c_9fcb117d8b441d45",
+        "c_33b2facd37d78a5d",
+        "c_3b7911083ed3cda0"
+      ],
+      "answer": "Nimbus targets 99.95 percent monthly availability for Enterprise organizations. [c_9fcb117d8b441d45]",
+      "gold_answer": "Nimbus targets 99.95 percent monthly availability for Enterprise organizations.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.133,
+        "generation": 3.846,
+        "total": 5.981
+      }
+    },
+    {
+      "id": "rag-08",
+      "question": "How quickly is a Priority One incident acknowledged?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_9fcb117d8b441d45"
+      ],
+      "retrieved_chunk_ids": [
+        "c_9fcb117d8b441d45",
+        "c_51abe9fac1a386bd",
+        "c_dcca4484c6d197cf"
+      ],
+      "answer": "The on-call engineer acknowledges Priority One incidents within 15 minutes. [c_9fcb117d8b441d45]",
+      "gold_answer": "The on-call engineer acknowledges Priority One incidents within 15 minutes.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.258,
+        "generation": 3.178,
+        "total": 5.437
+      }
+    },
+    {
+      "id": "rag-09",
+      "question": "When is the written incident report delivered?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_9fcb117d8b441d45"
+      ],
+      "retrieved_chunk_ids": [
+        "c_9fcb117d8b441d45",
+        "c_51abe9fac1a386bd",
+        "c_dcca4484c6d197cf"
+      ],
+      "answer": "A written incident report is delivered within five business days after resolution. [c_9fcb117d8b441d45]",
+      "gold_answer": "A written incident report is delivered within five business days after resolution.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.172,
+        "generation": 2.956,
+        "total": 5.128
+      }
+    },
+    {
+      "id": "rag-10",
+      "question": "What encryption protects stored customer data?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_33b2facd37d78a5d"
+      ],
+      "retrieved_chunk_ids": [
+        "c_33b2facd37d78a5d",
+        "c_9fcb117d8b441d45",
+        "c_51abe9fac1a386bd"
+      ],
+      "answer": "Nimbus encrypts stored customer data with AES-256 and encrypts network traffic with TLS 1.3. [c_33b2facd37d78a5d]",
+      "gold_answer": "Nimbus encrypts stored customer data with AES-256 and encrypts network traffic with TLS 1.3.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.19,
+        "generation": 3.367,
+        "total": 5.558
+      }
+    },
+    {
+      "id": "rag-11",
+      "question": "How long are Enterprise audit events retained?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_33b2facd37d78a5d"
+      ],
+      "retrieved_chunk_ids": [
+        "c_33b2facd37d78a5d",
+        "c_9fcb117d8b441d45",
+        "c_6d9515aca14313c2"
+      ],
+      "answer": "Audit log events are retained for 365 days on Enterprise and 90 days on Team. [c_33b2facd37d78a5d]",
+      "gold_answer": "Audit log events are retained for 365 days on Enterprise and 90 days on Team.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.182,
+        "generation": 3.207,
+        "total": 5.39
+      }
+    },
+    {
+      "id": "rag-12",
+      "question": "What happens immediately after a project is deleted?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_1dce44303c9a29ac",
+        "c_33b2facd37d78a5d"
+      ],
+      "retrieved_chunk_ids": [
+        "c_1dce44303c9a29ac",
+        "c_33b2facd37d78a5d",
+        "c_e1615e8ef301e68f"
+      ],
+      "answer": "project is deleted, it enters a seven-day recoverable state. [c_1dce44303c9a29ac]",
+      "gold_answer": "When a project is deleted, it enters a seven-day recoverable state.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.6666666666666666
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.9090909090909091,
+        "exact_match": 0.0,
+        "token_f1": 0.9090909090909091
+      },
+      "latency_ms": {
+        "retrieval": 2.304,
+        "generation": 3.08,
+        "total": 5.385
+      }
+    },
+    {
+      "id": "rag-13",
+      "question": "Which days are normal hosted service deployments?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_dcca4484c6d197cf"
+      ],
+      "retrieved_chunk_ids": [
+        "c_e1615e8ef301e68f",
+        "c_dcca4484c6d197cf",
+        "c_9fcb117d8b441d45"
+      ],
+      "answer": "Nimbus deploys the hosted service on Tuesdays and Thursdays. [c_dcca4484c6d197cf]",
+      "gold_answer": "Nimbus deploys the hosted service on Tuesdays and Thursdays.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "ndcg@3": 0.6309297535714575,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.872,
+        "generation": 3.635,
+        "total": 6.507
+      }
+    },
+    {
+      "id": "rag-14",
+      "question": "How long does the initial five-percent canary run?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_dcca4484c6d197cf"
+      ],
+      "retrieved_chunk_ids": [
+        "c_dcca4484c6d197cf",
+        "c_9fcb117d8b441d45",
+        "c_3b7911083ed3cda0"
+      ],
+      "answer": "Production rollout starts with a five-percent canary for 20 minutes. [c_dcca4484c6d197cf]",
+      "gold_answer": "Production rollout starts with a five-percent canary for 20 minutes.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.584,
+        "generation": 4.105,
+        "total": 6.691
+      }
+    },
+    {
+      "id": "rag-15",
+      "question": "What error rate triggers automatic rollback?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_dcca4484c6d197cf"
+      ],
+      "retrieved_chunk_ids": [
+        "c_dcca4484c6d197cf",
+        "c_3537509368fed839",
+        "c_3d941e7356cc3eb3"
+      ],
+      "answer": "An automatic rollback begins if the five-minute error rate exceeds two percent or p95 latency rises by more than 40 percent from baseline. [c_dcca4484c6d197cf]",
+      "gold_answer": "An automatic rollback begins if the five-minute error rate exceeds two percent or p95 latency rises by more than 40 percent from baseline.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.3333333333333333
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.372,
+        "generation": 3.209,
+        "total": 5.581
+      }
+    },
+    {
+      "id": "rag-16",
+      "question": "Which webhook response status codes count as successful?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_3537509368fed839"
+      ],
+      "retrieved_chunk_ids": [
+        "c_3537509368fed839",
+        "c_3d941e7356cc3eb3"
+      ],
+      "answer": "A webhook delivery is considered successful for any response status from 200 through 299. [c_3537509368fed839]",
+      "gold_answer": "A webhook delivery is considered successful for any response status from 200 through 299.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.5
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.02,
+        "generation": 2.077,
+        "total": 4.099
+      }
+    },
+    {
+      "id": "rag-17",
+      "question": "Which algorithm signs webhook requests?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_3537509368fed839"
+      ],
+      "retrieved_chunk_ids": [
+        "c_3537509368fed839"
+      ],
+      "answer": "Every webhook request includes an X-Nimbus-Signature header computed with HMAC-SHA256. [c_3537509368fed839]",
+      "gold_answer": "Every webhook request includes an X-Nimbus-Signature header computed with HMAC-SHA256.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 1.0
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.539,
+        "generation": 2.042,
+        "total": 4.581
+      }
+    },
+    {
+      "id": "rag-18",
+      "question": "What does the API return when a client is rate limited?",
+      "answerable": true,
+      "relevant_chunk_ids": [
+        "c_3537509368fed839",
+        "c_3d941e7356cc3eb3"
+      ],
+      "retrieved_chunk_ids": [
+        "c_3537509368fed839",
+        "c_3d941e7356cc3eb3",
+        "c_e1615e8ef301e68f"
+      ],
+      "answer": "A rate-limited request returns status 429 and a Retry-After header measured in seconds. [c_3537509368fed839]",
+      "gold_answer": "A rate-limited request returns status 429 and a Retry-After header measured in seconds.",
+      "retrieval": {
+        "recall@3": 1.0,
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "context_precision": 0.6666666666666666
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.295,
+        "generation": 3.323,
+        "total": 5.62
+      }
+    },
+    {
+      "id": "rag-19",
+      "question": "What is the cafeteria lunch menu?",
+      "answerable": false,
+      "relevant_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "answer": "I don't have enough relevant context in the indexed documents to answer.",
+      "gold_answer": "NO_RELEVANT_CONTEXT",
+      "retrieval": {
+        "recall@3": null,
+        "hit_rate": null,
+        "mrr": null,
+        "ndcg@3": null,
+        "context_precision": null
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.617,
+        "generation": 0.008,
+        "total": 2.626
+      }
+    },
+    {
+      "id": "rag-20",
+      "question": "Who founded Nimbus and in what year?",
+      "answerable": false,
+      "relevant_chunk_ids": [],
+      "retrieved_chunk_ids": [],
+      "answer": "I don't have enough relevant context in the indexed documents to answer.",
+      "gold_answer": "NO_RELEVANT_CONTEXT",
+      "retrieval": {
+        "recall@3": null,
+        "hit_rate": null,
+        "mrr": null,
+        "ndcg@3": null,
+        "context_precision": null
+      },
+      "answer_metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "exact_match": 1.0,
+        "token_f1": 1.0
+      },
+      "latency_ms": {
+        "retrieval": 2.231,
+        "generation": 0.006,
+        "total": 2.238
+      }
+    }
+  ]
+}

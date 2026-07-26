@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-07-26T07:56:02.170510+00:00",
+  "currency": "USD",
+  "scope": "Direct vector-store infrastructure only",
+  "assumptions": {
+    "embedding_dimensions": 768,
+    "float_bytes": 4,
+    "metadata_bytes_per_record": 1024,
+    "queries_per_month": 100000,
+    "aws_ebs_gp3_usd_per_gb_month": 0.08,
+    "pinecone_storage_usd_per_gb_month": 0.33,
+    "pinecone_query_usd_per_million_ru": 16.0,
+    "pinecone_standard_monthly_minimum_usd": 50.0,
+    "pinecone_legacy_p1_estimated_monthly_per_pod_usd": 85.72,
+    "excluded": [
+      "embedding generation",
+      "LLM generation",
+      "network egress",
+      "backups",
+      "observability",
+      "engineering/on-call labor",
+      "taxes"
+    ]
+  },
+  "rows": [
+    {
+      "vectors": 100000,
+      "estimated_record_data_gb": 0.41,
+      "queries_per_month": 100000,
+      "chroma_instance_assumption": "t4g.small-equivalent",
+      "chroma_compute_usd_month": 12.26,
+      "chroma_ebs_gb": 10,
+      "chroma_ebs_usd_month": 0.8,
+      "chroma_total_usd_month": 13.06,
+      "pinecone_serverless_usage_before_minimum_usd": 0.79,
+      "pinecone_serverless_standard_usd_month": 50.0,
+      "pinecone_legacy_p1_pods": 1,
+      "pinecone_legacy_p1_usd_month": 85.72
+    },
+    {
+      "vectors": 1000000,
+      "estimated_record_data_gb": 4.096,
+      "queries_per_month": 100000,
+      "chroma_instance_assumption": "t4g.large-equivalent",
+      "chroma_compute_usd_month": 49.06,
+      "chroma_ebs_gb": 30,
+      "chroma_ebs_usd_month": 2.4,
+      "chroma_total_usd_month": 51.46,
+      "pinecone_serverless_usage_before_minimum_usd": 7.91,
+      "pinecone_serverless_standard_usd_month": 50.0,
+      "pinecone_legacy_p1_pods": 1,
+      "pinecone_legacy_p1_usd_month": 85.72
+    },
+    {
+      "vectors": 10000000,
+      "estimated_record_data_gb": 40.96,
+      "queries_per_month": 100000,
+      "chroma_instance_assumption": "r7g.2xlarge-equivalent",
+      "chroma_compute_usd_month": 312.73,
+      "chroma_ebs_gb": 100,
+      "chroma_ebs_usd_month": 8.0,
+      "chroma_total_usd_month": 320.73,
+      "pinecone_serverless_usage_before_minimum_usd": 79.05,
+      "pinecone_serverless_standard_usd_month": 79.05,
+      "pinecone_legacy_p1_pods": 10,
+      "pinecone_legacy_p1_usd_month": 857.2
+    }
+  ]
+}

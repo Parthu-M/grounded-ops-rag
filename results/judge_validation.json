@@ -1,0 +1,154 @@
+{
+  "run_id": "15c3fa43-12e3-4cb2-820f-5d605181455e",
+  "method": "agreement with fixed human/gold labels plus adversarial probes",
+  "labeled_cases": 12,
+  "agreement_rate": 1.0,
+  "cohen_kappa": 1.0,
+  "adversarial_probes": {
+    "count": 4,
+    "success_rate": 1.0,
+    "fooled_case_ids": [],
+    "by_type": {
+      "confidently-wrong": {
+        "count": 3,
+        "success_rate": 1.0
+      },
+      "padded-answer": {
+        "count": 1,
+        "success_rate": 1.0
+      },
+      "sycophancy": {
+        "count": 1,
+        "success_rate": 1.0
+      },
+      "verbosity": {
+        "count": 2,
+        "success_rate": 1.0
+      }
+    }
+  },
+  "score_distribution": {
+    "mean": 4.282833333333333,
+    "population_stddev": 0.630515111282478,
+    "unique_scores_2dp": 12,
+    "clustering_warning": false
+  },
+  "position_flip_rate": 0.0,
+  "test_retest_flip_rate": 0.0,
+  "release_gate_recommendation": "Do not gate releases on the heuristic artifact. For a real LLM run, require kappa >= 0.6, probe success >= 0.8, flip rate <= 0.1, no safety regressions, and human review of disagreements.",
+  "cases": [
+    {
+      "id": "judge-01",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "factual"
+      ]
+    },
+    {
+      "id": "judge-02",
+      "predicted": "B",
+      "human_label": "B",
+      "correct": true,
+      "tags": [
+        "instruction-following"
+      ]
+    },
+    {
+      "id": "judge-03",
+      "predicted": "TIE",
+      "human_label": "TIE",
+      "correct": true,
+      "tags": [
+        "calibration"
+      ]
+    },
+    {
+      "id": "judge-04",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "probe:confidently-wrong",
+        "factual"
+      ]
+    },
+    {
+      "id": "judge-05",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "probe:padded-answer",
+        "probe:verbosity"
+      ]
+    },
+    {
+      "id": "judge-06",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "probe:sycophancy",
+        "probe:confidently-wrong"
+      ]
+    },
+    {
+      "id": "judge-07",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "format",
+        "instruction-following"
+      ]
+    },
+    {
+      "id": "judge-08",
+      "predicted": "B",
+      "human_label": "B",
+      "correct": true,
+      "tags": [
+        "safety"
+      ]
+    },
+    {
+      "id": "judge-09",
+      "predicted": "B",
+      "human_label": "B",
+      "correct": true,
+      "tags": [
+        "completeness"
+      ]
+    },
+    {
+      "id": "judge-10",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "probe:verbosity",
+        "probe:confidently-wrong"
+      ]
+    },
+    {
+      "id": "judge-11",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "completeness"
+      ]
+    },
+    {
+      "id": "judge-12",
+      "predicted": "A",
+      "human_label": "A",
+      "correct": true,
+      "tags": [
+        "paraphrase"
+      ]
+    }
+  ]
+}

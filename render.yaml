@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: grounded-ops-rag-parthu
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: AI_TAKEHOME_HOME
+        value: /app
+      - key: CHROMA_PATH
+        value: /app/.runtime/chroma
+      - key: UPLOAD_DIR
+        value: /app/.runtime/uploads
+      - key: QUERY_LOG_PATH
+        value: /app/.runtime/logs/rag_queries.jsonl
+      - key: GENERATOR_PROVIDER
+        value: extractive
+      - key: MAX_UPLOAD_MB
+        value: "10"
+      - key: MAX_UPLOAD_FILES
+        value: "5"
+      - key: PYTHONUNBUFFERED
+        value: "1"

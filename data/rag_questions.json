@@ -1,0 +1,130 @@
+{
+  "name": "nimbus-fixed-rag-evaluation-v1",
+  "description": "Twenty fixed questions. Relevant chunks are resolved by exact answer anchors after chunking, so qrels are chunk-level and reproducible.",
+  "questions": [
+    {
+      "id": "rag-01",
+      "question": "How long do Nimbus access tokens last?",
+      "gold_answer": "Nimbus access tokens expire after 15 minutes.",
+      "relevant_anchors": ["access tokens expire after 15 minutes"]
+    },
+    {
+      "id": "rag-02",
+      "question": "How many active API keys may one service account have?",
+      "gold_answer": "Each service account can hold at most five active API keys.",
+      "relevant_anchors": ["service account can hold at most five active API keys"]
+    },
+    {
+      "id": "rag-03",
+      "question": "How often does SCIM synchronize users and groups?",
+      "gold_answer": "SCIM provisioning synchronizes users and groups from the identity provider every 40 minutes.",
+      "relevant_anchors": ["synchronizes users and groups from the identity provider every 40 minutes"]
+    },
+    {
+      "id": "rag-04",
+      "question": "When does a subscription upgrade take effect?",
+      "gold_answer": "Subscription upgrades take effect immediately and the remaining billing period is prorated.",
+      "relevant_anchors": ["subscription upgrades take effect immediately"],
+      "metadata_filter": {"doc_type": "md"}
+    },
+    {
+      "id": "rag-05",
+      "question": "What is the storage overage price?",
+      "gold_answer": "Usage above the included storage allowance is billed at 12 cents per gigabyte-month.",
+      "relevant_anchors": ["billed at 12 cents per gigabyte-month"]
+    },
+    {
+      "id": "rag-06",
+      "question": "Within how many days must an invoice be disputed?",
+      "gold_answer": "Customers must contact support within 30 days to dispute an invoice.",
+      "relevant_anchors": ["contact support within 30 days to dispute an invoice"]
+    },
+    {
+      "id": "rag-07",
+      "question": "What availability does Nimbus target for Enterprise?",
+      "gold_answer": "Nimbus targets 99.95 percent monthly availability for Enterprise organizations.",
+      "relevant_anchors": ["targets 99.95 percent monthly availability"]
+    },
+    {
+      "id": "rag-08",
+      "question": "How quickly is a Priority One incident acknowledged?",
+      "gold_answer": "The on-call engineer acknowledges Priority One incidents within 15 minutes.",
+      "relevant_anchors": ["acknowledges Priority One incidents within 15 minutes"]
+    },
+    {
+      "id": "rag-09",
+      "question": "When is the written incident report delivered?",
+      "gold_answer": "A written incident report is delivered within five business days after resolution.",
+      "relevant_anchors": ["incident report is delivered within five business days"]
+    },
+    {
+      "id": "rag-10",
+      "question": "What encryption protects stored customer data?",
+      "gold_answer": "Nimbus encrypts stored customer data with AES-256 and encrypts network traffic with TLS 1.3.",
+      "relevant_anchors": ["encrypts stored customer data with AES-256"]
+    },
+    {
+      "id": "rag-11",
+      "question": "How long are Enterprise audit events retained?",
+      "gold_answer": "Audit log events are retained for 365 days on Enterprise and 90 days on Team.",
+      "relevant_anchors": ["retained for 365 days on Enterprise"]
+    },
+    {
+      "id": "rag-12",
+      "question": "What happens immediately after a project is deleted?",
+      "gold_answer": "When a project is deleted, it enters a seven-day recoverable state.",
+      "relevant_anchors": ["enters a seven-day recoverable state"]
+    },
+    {
+      "id": "rag-13",
+      "question": "Which days are normal hosted service deployments?",
+      "gold_answer": "Nimbus deploys the hosted service on Tuesdays and Thursdays.",
+      "relevant_anchors": ["hosted service on Tuesdays and Thursdays"]
+    },
+    {
+      "id": "rag-14",
+      "question": "How long does the initial five-percent canary run?",
+      "gold_answer": "Production rollout starts with a five-percent canary for 20 minutes.",
+      "relevant_anchors": ["five-percent canary for 20 minutes"]
+    },
+    {
+      "id": "rag-15",
+      "question": "What error rate triggers automatic rollback?",
+      "gold_answer": "An automatic rollback begins if the five-minute error rate exceeds two percent or p95 latency rises by more than 40 percent from baseline.",
+      "relevant_anchors": ["five-minute error rate exceeds two percent"]
+    },
+    {
+      "id": "rag-16",
+      "question": "Which webhook response status codes count as successful?",
+      "gold_answer": "A webhook delivery is considered successful for any response status from 200 through 299.",
+      "relevant_anchors": ["response status from 200 through 299"],
+      "metadata_filter": {"doc_type": "html"}
+    },
+    {
+      "id": "rag-17",
+      "question": "Which algorithm signs webhook requests?",
+      "gold_answer": "Every webhook request includes an X-Nimbus-Signature header computed with HMAC-SHA256.",
+      "relevant_anchors": ["computed with HMAC-SHA256"],
+      "metadata_filter": {"doc_type": "html"}
+    },
+    {
+      "id": "rag-18",
+      "question": "What does the API return when a client is rate limited?",
+      "gold_answer": "A rate-limited request returns status 429 and a Retry-After header measured in seconds.",
+      "relevant_anchors": ["returns status 429 and a Retry-After header"]
+    },
+    {
+      "id": "rag-19",
+      "question": "What is the cafeteria lunch menu?",
+      "gold_answer": "NO_RELEVANT_CONTEXT",
+      "relevant_anchors": []
+    },
+    {
+      "id": "rag-20",
+      "question": "Who founded Nimbus and in what year?",
+      "gold_answer": "NO_RELEVANT_CONTEXT",
+      "relevant_anchors": []
+    }
+  ]
+}
+

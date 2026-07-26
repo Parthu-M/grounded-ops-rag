@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "applied-ai-takehome"
+version = "1.0.0"
+description = "Cost-efficient RAG service and bias-aware LLM-as-judge pipeline"
+requires-python = ">=3.11"
+dependencies = [
+  "chromadb>=1.0,<2",
+  "fastapi>=0.115,<1",
+  "numpy>=1.26,<3",
+  "openai>=1.50,<3",
+  "python-multipart>=0.0.20,<1",
+  "pydantic>=2.8,<3",
+  "pypdf>=5,<7",
+  "PyYAML>=6,<7",
+  "scikit-learn>=1.5,<2",
+  "uvicorn[standard]>=0.30,<1",
+]
+
+[project.optional-dependencies]
+dev = ["httpx>=0.27,<1", "pytest>=8,<9"]
+
+[project.scripts]
+rag = "ai_takehome.rag.cli:main"
+judge = "ai_takehome.judge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"ai_takehome.rag" = ["static/*", "static/assets/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
