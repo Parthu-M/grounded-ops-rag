@@ -786,7 +786,7 @@ button.sidebar-close {
 
 .snapshot-note span {
   margin-top: 4px;
-  color: #598176;
+  color: #46685f;
   font-size: 9px;
   line-height: 1.4;
 }
@@ -802,7 +802,7 @@ button.sidebar-close {
   position: absolute;
   top: 12px;
   right: 18px;
-  color: #282b33;
+  color: #5f6675;
   font-family: Georgia, serif;
   font-size: 70px;
 }
