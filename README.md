@@ -3,6 +3,8 @@
 [![CI](https://github.com/Parthu-M/applied-ai-takehome/actions/workflows/ci.yml/badge.svg)](https://github.com/Parthu-M/applied-ai-takehome/actions/workflows/ci.yml)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Parthu-M/applied-ai-takehome)
 
+[Open the live Grounded Ops application](https://grounded-ops-rag-parthu.onrender.com)
+
 This repository answers both assignment problems:
 
 1. a Chroma-backed, cost-conscious RAG HTTP service with reproducible retrieval, answer, latency, and cost evaluation; and
