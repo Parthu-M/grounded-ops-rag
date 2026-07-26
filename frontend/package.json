@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/prepare-sites-output.mjs",
+    "build": "tsc -b && vite build",
     "build:embed": "tsc -b && vite build --mode embedded --outDir ../src/ai_takehome/rag/static --emptyOutDir",
-    "build:sites": "npm run build",
+    "build:sites": "npm run build && node scripts/prepare-sites-output.mjs",
     "preview": "vite preview",
     "test": "vitest run"
   },
