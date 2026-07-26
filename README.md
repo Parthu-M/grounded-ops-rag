@@ -76,6 +76,11 @@ npm test
 npm run build
 ```
 
+`npm run build` creates a portable static production build in `frontend/dist`.
+Codex Sites packaging is intentionally separate: `npm run build:sites` adds the
+Sites worker and requires the local, uncommitted `.openai/hosting.json` metadata
+created when the project is connected to Sites.
+
 ### Integrated production build
 
 The production build is embedded in the Python package and served from the same origin as the API:
